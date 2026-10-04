@@ -1,12 +1,29 @@
-# Ignorar archivos compilados de Python
+# Archivos de Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Ignorar configuraciones locales de VS Code
-.vscode/
+# Archivos de entorno
+.env
+*.env
 
-# Ignorar entornos virtuales
-venv/
-env/
+# Archivos de configuración local
+.vscode/
+.idea/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Archivos de compilación
+*.egg-info/
+build/
+dist/

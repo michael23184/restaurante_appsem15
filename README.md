@@ -1,26 +1,7 @@
 # Restaurante App - Semana 15
 
-Este proyecto corresponde al sistema de gestión de restaurante desarrollado en el curso de TIC.  
-En esta versión (Semana 15) se implementan las funcionalidades completas de **usuarios, productos y ventas**, con interfaz gráfica en Tkinter y persistencia en archivos JSON.
-
----
-
-## 🚀 Funcionalidades principales
-
-- **Gestión de usuarios**  
-  - Registro y autenticación por correo y clave.  
-  - Identificación única de cada usuario.
-
-- **Gestión de productos**  
-  - Visualización de lista de productos con ID, nombre, precio y cantidad.  
-  - Actualización automática de stock al registrar ventas.
-
-- **Gestión de ventas**  
-  - Registro de ventas seleccionando usuario y producto desde combobox.  
-  - Generación automática de identificador de venta (`V001`, `V002`, …).  
-  - Almacenamiento en `ventas.json`.  
-  - Tabla de ventas con ID, usuario, producto y fecha.  
-  - Mensajes de confirmación y validación de errores.
+Aplicativo desarrollado en Python como parte de la asignatura de **Programación Orientada a Objetos (POO)**.  
+El sistema permite gestionar usuarios, productos, ventas y reportes dentro de un entorno académico, con interfaz gráfica en **Tkinter**.
 
 ---
 
@@ -28,43 +9,125 @@ En esta versión (Semana 15) se implementan las funcionalidades completas de **u
 
 restaurante_appsem15/
 │
-├── assets/          # Archivos gráficos (logo, íconos)
-├── datos/           # Archivos JSON (usuarios.json, productos.json, ventas.json)
-├── modelos/         # Clases Usuario, Producto, Venta
-├── servicios/       # Lógica de negocio (RestauranteServicio)
-├── ui/              # Interfaces gráficas (login_view.py, main_view.py)
-└── main.py          # Punto de entrada de la aplicación
+├── datos/
+│   ├── usuarios.json
+│   └── ventas.json
+│
+├── modelos/
+│   ├── usuario.py
+│   ├── producto.py
+│   └── venta.py
+│
+├── servicios/
+│   ├── auth_service.py
+│   ├── archivo_servicio.py
+│   └── restaurante.py
+│
+├── ui/
+│   ├── login_view.py
+│   └── main_view.py
+│
+├── assets/
+│   └── logo.png.png
+│
+├── main.py
+├── README.md
+└── .gitignore
 
 Código
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## ⚙️ Requisitos
 
-- **Python 3.x**  
-- **Tkinter** (interfaz gráfica)  
-- **JSON** (persistencia de datos)  
-- **Git & GitHub** (control de versiones)
+- Python 3.10 o superior
+- Librerías:
+  - `tkinter` (incluida en Python)
+  - `pillow` (para manejo de imágenes)
 
----
+Instalación de dependencias:
+```bash
+pip install pillow
+🚀 Ejecución
+Clonar el repositorio:
 
-## ▶️ Ejecución del proyecto
-
-1. Clonar el repositorio:
-git clone https://github.com/TU_USUARIO/restaurante_appsem15.git
-
-
-2. Entrar a la carpeta:
+bash
+git clone <URL-del-repositorio>
 cd restaurante_appsem15
+Ejecutar el programa:
 
-
-3. Ejecutar la aplicación:
+bash
 python main.py
+Se abrirá la ventana de Login.
+Ingresa un usuario válido desde datos/usuarios.json.
 
+👥 Usuarios de prueba
+Ejemplo de usuarios disponibles en usuarios.json:
 
-📌 Notas finales
-Esta versión corresponde a la Semana 15, con el sistema funcionando correctamente.
+json
+[
+    {
+        "identificacion": "U001",
+        "nombre": "Michael",
+        "correo": "michael@correo.com",
+        "clave": "1234"
+    },
+    {
+        "identificacion": "U002",
+        "nombre": "Ana",
+        "correo": "ana@correo.com",
+        "clave": "4321"
+    },
+    {
+        "identificacion": "U005",
+        "nombre": "Docente",
+        "correo": "docente@universidad.com",
+        "clave": "evaluar"
+    }
+]
+🖥️ Flujo del sistema
+Login
 
-Se probó el registro de ventas con distintos usuarios y productos, confirmando que se guardan en ventas.json y se muestran en la tabla de la interfaz.
+Validación por correo y clave.
 
-El proyecto está listo para entrega como deber académico.
+Mensaje de bienvenida si el acceso es correcto.
+
+Ventana principal (main_view.py)
+
+Menú con botones:
+
+Gestión de Productos
+
+Gestión de Ventas
+
+Reportes
+
+Salir
+
+Gestión de datos
+
+Los archivos JSON (usuarios.json, ventas.json) almacenan la información.
+
+Se accede mediante los servicios (auth_service.py, archivo_servicio.py).
+
+🎨 Interfaz
+Logo redimensionado (100x100 px).
+
+Colores diferenciados en botones.
+
+Contraste mejorado para etiquetas y campos.
+
+✅ Checklist de validación
+[x] Login funcional con varios usuarios.
+
+[x] Logo visible y redimensionado.
+
+[x] Botón “Ingresar” accesible.
+
+[x] Ventana principal con menú.
+
+[x] Repositorio limpio y organizado.
+
+📌 Nota académica
+Este proyecto corresponde a la Semana 15 de la asignatura de POO.
+El objetivo es demostrar la correcta aplicación de fundamentos de programación orientada a objetos, manejo de archivos, modularidad y diseño de interfaz gráfica.

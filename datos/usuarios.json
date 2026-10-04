@@ -10,5 +10,23 @@
         "nombre": "Ana",
         "correo": "ana@correo.com",
         "clave": "4321"
+    },
+    {
+        "identificacion": "U003",
+        "nombre": "Carlos",
+        "correo": "carlos@correo.com",
+        "clave": "abcd"
+    },
+    {
+        "identificacion": "U004",
+        "nombre": "Laura",
+        "correo": "laura@correo.com",
+        "clave": "pass2026"
+    },
+    {
+        "identificacion": "U005",
+        "nombre": "Docente",
+        "correo": "docente@universidad.com",
+        "clave": "evaluar"
     }
 ]
